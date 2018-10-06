@@ -10,5 +10,5 @@ variables:
   imageName: 'microsoft/dotnet:2.1-aspnetcore-runtime'
 
 steps:
-- script: docker build -f 'IN3.Demo.Api\Dockerfile' -t $(imageName) .
+- script: docker build -f 'IN3.Demo.Api/Dockerfile' -t $(imageName) .
   displayName: 'docker build'
