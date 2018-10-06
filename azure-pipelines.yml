@@ -7,8 +7,9 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 variables:
-  imageName: 'microsoft/dotnet:2.1-aspnetcore-runtime'
+  imageName: 'in3-demo-build'
 
 steps:
 - script: docker build -f 'IN3.Demo.Api/Dockerfile' -t $(imageName) .
   displayName: 'docker build'
+- script: dotnet test IN3.Demo.ApiTest.csproj
