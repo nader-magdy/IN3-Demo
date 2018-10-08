@@ -14,3 +14,5 @@ steps:
   displayName: 'docker build'
 - script: dotnet test IN3.Demo.ApiTest/IN3.Demo.ApiTest.csproj
   displayName: 'Unit test'
+- script: az acr login --name DevOpsDemoReg --password 'JDdgUIHTCgcWcMRwnSD9y/Zmd9B8MVkz'
+  displayName: 'Login to ACR'
