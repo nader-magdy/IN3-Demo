@@ -37,6 +37,7 @@ steps:
     docker push $(dockerId).azurecr.io/$(imageName)
   env:
     pswd: $(dockerPassword)
+  displayName: 'docker build'
 
 - task: PublishTestResults@2
   inputs:
